@@ -12,8 +12,10 @@ function countdownCalc() {
     var minutes = Math.floor((time / 1000 / 60) % 60);
     var hours = Math.floor((time / (1000 * 60 * 60)) % 24);
     var days = Math.floor(time / (1000 * 60 * 60 * 24));
+    // var years = Math.floor((time / (1000 * 60 * 60 * 24)) * 365);
     return {
       'total': time,
+      // 'years': years,
       'days': days,
       'hours': hours,
       'minutes': minutes,
@@ -22,6 +24,7 @@ function countdownCalc() {
   } else {
       return {
       'total': 0,
+      // 'years': 0,
       'days': 0,
       'hours': 0,
       'minutes': 0,
@@ -33,6 +36,7 @@ function countdownCalc() {
 // initialize clock
 function initializeClock(id, finishTime) {
   var clock = document.getElementById(id);
+  // var yearsSpan = clock.querySelector('.years');
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
@@ -58,3 +62,11 @@ function initializeClock(id, finishTime) {
 
 var deadline = new Date("June 14, 2018 11:00:00").getTime();
 initializeClock('clockdiv', deadline);
+
+// TODO:
+/*
+* - Implement years
+* - Count for leap years
+* - Modify months: not all months have the same num of days
+* - Responsive design / css grid / flexbox
+*/
