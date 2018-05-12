@@ -157,22 +157,46 @@ button:hover, button:active {
   right: 0;
 }
 
-@media screen and (max-width: 480px) {
+.clear {
+  clear: both;
+}
+
+@media screen and (max-width: 600) {
+  #wrapper {
+    overflow:hidden;
+    float:none;
+    display: block;
+    margin: auto;
+    width: 95%;
+  }
+  .countdowndiv {
+    float:none;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  .clear__mobile {
+    clear: both;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 601px) {
   #wrapper {
     display: block;
     width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     white-space: normal;
   }
   .countdowndiv {
     display: block;
     width: 100%;
-    margin: 20px auto;
+    /* margin: 20px auto; */
     white-space: normal;
   }
   .time {
     display: block;
-    margin: 10px;
+    /* margin: 10px; */
     /* white-space: normal; */
   }
 }
