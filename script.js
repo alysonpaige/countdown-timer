@@ -68,5 +68,5 @@ initializeClock('clockdiv', deadline);
 * - Implement years
 * - Count for leap years
 * - Modify months: not all months have the same num of days
-* - Responsive design / css grid / flexbox
+* - FIXME: responsive design: css grid / flexbox
 */
